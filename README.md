@@ -6,7 +6,9 @@ Name: Nihaal Gaina
 
 CCID: nihaal
 
-Collaborators:  
+Collaborators: Claude AI (by Anthropic), used for query 9
+               to learn why it wasn't passing the given
+               test cases.
 
 ## How to run tests locally on lab machines
 
