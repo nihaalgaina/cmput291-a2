@@ -1,0 +1,12 @@
+{"account_id": 21, "sector": "Energy", "percent_invested": 16.67}
+{"account_id": 21, "sector": "Financials", "percent_invested": 16.67}
+{"account_id": 21, "sector": "Healthcare", "percent_invested": 25.0}
+{"account_id": 21, "sector": "Materials", "percent_invested": 25.0}
+{"account_id": 21, "sector": "Technology", "percent_invested": 16.67}
+{"account_id": 22, "sector": "Financials", "percent_invested": 25.0}
+{"account_id": 22, "sector": "Technology", "percent_invested": 75.0}
+{"account_id": 23, "sector": "Energy", "percent_invested": 100.0}
+{"account_id": 24, "sector": "Healthcare", "percent_invested": 40.0}
+{"account_id": 24, "sector": "Materials", "percent_invested": 60.0}
+{"account_id": 25, "sector": "Energy", "percent_invested": -50.0}
+{"account_id": 25, "sector": "Technology", "percent_invested": 150.0}

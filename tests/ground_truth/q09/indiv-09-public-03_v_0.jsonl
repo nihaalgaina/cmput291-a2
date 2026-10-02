@@ -1,0 +1,11 @@
+{"account_id": 21, "exg_code": "NYSE", "ticker": "SPAN", "qty": 100, "avg_cost": 80.0, "close_price": 25.0, "market_value": 2500.0}
+{"account_id": 22, "exg_code": "NYSE", "ticker": "SPAN", "qty": 1, "avg_cost": 85.0, "close_price": 25.0, "market_value": 25.0}
+{"account_id": 23, "exg_code": "NYSE", "ticker": "SPAN", "qty": 1000000, "avg_cost": 20.0, "close_price": 25.0, "market_value": 25000000.0}
+{"account_id": 24, "exg_code": "NYSE", "ticker": "SPAN", "qty": 250, "avg_cost": 60.0, "close_price": 25.0, "market_value": 6250.0}
+{"account_id": 25, "exg_code": "NYSE", "ticker": "SPAN", "qty": -40, "avg_cost": 95.0, "close_price": 25.0, "market_value": -1000.0}
+{"account_id": 21, "exg_code": "NASDAQ", "ticker": "SPAN", "qty": 300, "avg_cost": 5.0, "close_price": 8.0, "market_value": 2400.0}
+{"account_id": 22, "exg_code": "NASDAQ", "ticker": "SPAN", "qty": 75, "avg_cost": 9.0, "close_price": 8.0, "market_value": 600.0}
+{"account_id": 21, "exg_code": "LSE", "ticker": "RELIC", "qty": 400, "avg_cost": 150.0, "close_price": 2.5, "market_value": 1000.0}
+{"account_id": 23, "exg_code": "LSE", "ticker": "RELIC", "qty": 12, "avg_cost": 3.0, "close_price": 2.5, "market_value": 30.0}
+{"account_id": 24, "exg_code": "TSX", "ticker": "QRTR", "qty": 20, "avg_cost": 35.0, "close_price": 40.0, "market_value": 800.0}
+{"account_id": 25, "exg_code": "TSX", "ticker": "QRTR", "qty": 5, "avg_cost": 38.0, "close_price": 40.0, "market_value": 200.0}

@@ -1,0 +1,8 @@
+{"account_id": 11, "sector": "Financials", "percent_invested": 50.0}
+{"account_id": 11, "sector": "Technology", "percent_invested": 50.0}
+{"account_id": 12, "sector": "Financials", "percent_invested": 87.5}
+{"account_id": 12, "sector": "Technology", "percent_invested": 12.5}
+{"account_id": 13, "sector": "Energy", "percent_invested": 25.0}
+{"account_id": 13, "sector": "Healthcare", "percent_invested": 25.0}
+{"account_id": 13, "sector": "Materials", "percent_invested": 50.0}
+{"account_id": 15, "sector": "Financials", "percent_invested": 100.0}
