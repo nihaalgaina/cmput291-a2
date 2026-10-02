@@ -1,0 +1,104 @@
+PRAGMA foreign_keys = ON;
+
+DROP TABLE IF EXISTS Trade;
+DROP TABLE IF EXISTS Orders;
+DROP TABLE IF EXISTS Holding;
+DROP TABLE IF EXISTS Account;
+DROP TABLE IF EXISTS MarketPrice;
+DROP TABLE IF EXISTS Stock;
+DROP TABLE IF EXISTS Exchange;
+DROP TABLE IF EXISTS Company;
+
+CREATE TABLE Company (
+    company_id INTEGER,
+    name       TEXT,
+    sector     TEXT,
+    industry   TEXT,
+    country    TEXT,
+    PRIMARY KEY (company_id)
+);
+
+CREATE TABLE Exchange (
+    code       TEXT,
+    name       TEXT,
+    country    TEXT,
+    timezone   TEXT,
+    PRIMARY KEY (code)
+);
+
+CREATE TABLE Stock (
+    ticker              TEXT,
+    exg_code            TEXT,
+    company_id          INTEGER NOT NULL,
+    currency            TEXT,
+    shares_outstanding  INTEGER,
+    ipo_date            DATE,
+    PRIMARY KEY (exg_code, ticker),
+    FOREIGN KEY (exg_code) REFERENCES Exchange(code),
+    FOREIGN KEY (company_id) REFERENCES Company(company_id)
+);
+
+CREATE TABLE MarketPrice (
+    exg_code    TEXT,
+    ticker      TEXT,
+    tday        DATE,
+    open_price  REAL,
+    high_price  REAL,
+    low_price   REAL,
+    close_price REAL,
+    volume      INTEGER,
+    PRIMARY KEY (exg_code, ticker, tday),
+    FOREIGN KEY (exg_code, ticker)
+        REFERENCES Stock(exg_code, ticker)
+);
+
+CREATE TABLE Account (
+    account_id     INTEGER,
+    customer_name  TEXT,
+    account_type   TEXT,
+    cash_balance   REAL,
+    creation_date  DATE,
+    PRIMARY KEY (account_id)
+);
+
+CREATE TABLE Holding (
+    account_id  INTEGER,
+    exg_code    TEXT,
+    ticker      TEXT,
+    qty         INTEGER,
+    avg_cost    REAL,
+    PRIMARY KEY (account_id, exg_code, ticker),
+    FOREIGN KEY (account_id)
+        REFERENCES Account(account_id),
+    FOREIGN KEY (exg_code, ticker)
+        REFERENCES Stock(exg_code, ticker)
+);
+
+CREATE TABLE Orders (
+    order_id    INTEGER,
+    account_id  INTEGER NOT NULL,
+    exg_code    TEXT NOT NULL,
+    ticker      TEXT NOT NULL,
+    order_type  TEXT,
+    side        TEXT,
+    qty         INTEGER,
+    price       REAL,
+    status      TEXT,
+    created_at  DATETIME,
+    PRIMARY KEY (order_id),
+    FOREIGN KEY (account_id)
+        REFERENCES Account(account_id),
+    FOREIGN KEY (exg_code, ticker)
+        REFERENCES Stock(exg_code, ticker)
+);
+
+CREATE TABLE Trade (
+    no           INTEGER,
+    order_id     INTEGER,
+    qty          INTEGER,
+    price        REAL,
+    executed_at  DATETIME,
+    PRIMARY KEY (order_id, no),
+    FOREIGN KEY (order_id)
+        REFERENCES Orders(order_id)
+);
